@@ -1,0 +1,12 @@
+*********EC2 TO S3 ACCESS CLI *************
+
+sudo apt update 
+sudo apt-get install awscli -y
+aws help
+ll
+nano abc
+ls
+aws s3 cp abc s3://<bucketname>/     copy file in bucket
+copy aws to terminal
+aws s3 ls s3://<bucketname>/
+aws s3 cp s3://<bucketname>/filename~
