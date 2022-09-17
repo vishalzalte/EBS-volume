@@ -1,0 +1,65 @@
+*********************VPC ************************
+************virtual privat cloud ****************
+# creat vpc 
+vpc range 10.0.0.0/16
+
+###pblice subnet
+
+#creat subnet
+publice subnet  10.0.0.0/24   auto assin id-inable 
+
+##diffrenat zon 
+privat subnet   10.0.1.0/24
+
+#creat intergeatway
+connect -vpc
+
+#creat router
+take vpc 
+rout - edit routes - addnes rout - 0.0.0.0/0 -interneatgatway
+subnet association - publice subnet
+
+#lounch ec2 
+neatwork - myvpc
+subnet - publice 
+security gr - ssh.http -anywere 
+lounch
+sudo apt update        ---successfully 
+
+
+###### privat subnet conection 
+
+##privat 
+#lounch ec2 
+take vpc 
+s.g - ssh, allicamp, my sql/auror ---custom -10.0.0.0/24 for all 
+lounch 
+
+#creat elastic ip
+
+
+#creat natgeatways 
+ 
+conection 
+main router - edit router - addroute --0.0.0.0/0 - natgeatway -save 
+sudo apt update                 --------successfuly
+
+**************************************************************************
+
+## delete prioccess 
+ec2 terminat 
+delete - natgeatway 
+elastic ip 
+delete --vpc 
+
+
+
+
+
+creat vpc - creat subnet - creat interneatgeatway - creat router -lounch ec2 -conect all
+
+creat subnet -  privat subneat -  elatic ip - creat natgeatway -           - conect defualt router - conect router 
+                                                     |
+                                            conect public subneat
+
+
